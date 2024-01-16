@@ -35,14 +35,11 @@ previousButton.addEventListener("click", function () {
 const viaButton = document.getElementById("via");
 const stopButton = document.getElementById("stop");
 const aside = document.getElementById("aside");
-
-let seconds = 0;
-let secondsPassed = [];
+let seconds = sessionStorage.getItem("seconds") || 0;
 
 const countdown = setInterval(function () {
-  aside.innerText = seconds;
   seconds++;
-  secondsPassed.push(seconds);
-  console.log(secondsPassed);
-  sessionStorage.setItem("seconds", JSON.stringify(secondsPassed));
+  aside.innerText = seconds;
+
+  sessionStorage.setItem("seconds", seconds);
 }, 1000);
