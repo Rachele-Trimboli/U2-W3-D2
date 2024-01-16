@@ -32,8 +32,6 @@ previousButton.addEventListener("click", function () {
 
 // timer
 
-const viaButton = document.getElementById("via");
-const stopButton = document.getElementById("stop");
 const aside = document.getElementById("aside");
 let seconds = sessionStorage.getItem("seconds") || 0;
 
